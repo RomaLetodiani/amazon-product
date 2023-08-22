@@ -10,8 +10,8 @@ const ProductPreview = (props) => {
       <img className="w-full" alt={props.title} src={props.image} />
       {props.btnCount === 0 ? (
         <div className="text-[#fff] text-[clamp(25px,3vw,50px)] absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">{`${
-          currentHours < 9 ? '0' + currentHours : currentHours
-        }:${currentMinutes < 9 ?  '0' + currentMinutes : currentMinutes}`}</div>
+          currentHours <= 9 ? '0' + currentHours : currentHours
+        }:${currentMinutes <= 9 ?  '0' + currentMinutes : currentMinutes}`}</div>
       ) : (
         <div className=" text-[#fff] flex flex-col justify-center items-center gap-5 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
           <BsFillHeartPulseFill className="text-red-500 text-[clamp(20px,5vw,50px)] animate-heartbeat" />
